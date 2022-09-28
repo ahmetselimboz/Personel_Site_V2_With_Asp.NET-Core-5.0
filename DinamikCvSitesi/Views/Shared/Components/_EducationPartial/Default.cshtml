@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+@model List<Education>
+
+
+
+<section class="resume-section" id="education">
+    <div class="resume-section-content">
+        <h2 class="mb-5">EĞİTİM HAYATIM</h2>
+        @foreach (var item in Model)
+        {
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">@item.Title </h3>
+                    <div class="subheading mb-3">@item.Subtitle1</div>
+                    <div>@item.Subtitle2</div>
+                    
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">@item.Date</span></div>
+            </div>
+        }
+
+        
+    </div>
+</section>
+<hr class="m-0" />

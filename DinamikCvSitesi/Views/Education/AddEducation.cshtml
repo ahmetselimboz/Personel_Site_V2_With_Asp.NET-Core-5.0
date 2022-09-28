@@ -1,0 +1,47 @@
+﻿@model EntityLayer.Concrete.Education
+@{
+    ViewData["Title"] = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Eğitim Ekleme Sayfası</h4>
+
+
+            <form class="forms-sample" method="post">
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Başlık</label>
+                    <div class="col-sm-9">
+                        <input type="text" asp-for="Title" class="form-control" id="exampleInputUsername2" placeholder="Başlık">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Alt Başlık</label>
+                    <div class="col-sm-9">
+                        <input type="text" asp-for="Subtitle1" class="form-control" id="exampleInputUsername2" placeholder="Alt Başlık">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">2- Alt Başlık</label>
+                    <div class="col-sm-9">
+                        <input type="text" asp-for="Subtitle2" class="form-control" id="exampleInputUsername2" placeholder="2- Alt Başlık">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Tarih</label>
+                    <div class="col-sm-9">
+                        <input type="text" asp-for="Date" class="form-control" id="exampleInputUsername2" placeholder="Tarih">
+                    </div>
+                </div>
+
+
+
+                <button class="btn btn-primary btn-rounded">Yeni Eğitim Ekle</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,94 @@
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | User Profile</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="stylesheet" href="/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+
+
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="timeline timeline-inverse">
+                    @foreach (var item in Model)
+                    {
+                        <br />
+                        
+                        <div class="time-label">
+                            <span class="bg-danger">
+                                @item.Date
+                            </span>
+                        </div>
+                        <!-- /.timeline-label -->
+                        <!-- timeline item -->
+                        <div>
+                            <i class="fas fa-envelope bg-primary"></i>
+
+                            <div class="timeline-item">
+
+                                <h3 class="timeline-header" style="font-size:20px;">@item.Name</h3>
+
+                                <div class="timeline-body">
+                                    <h4 style="font-size:18px;">@item.Subject</h4>
+
+                                    <h5 style="font-size:14px;">@item.Message</h5>
+                                </div>
+
+                                <div class="timeline-footer">
+                                    
+                                    <a href="/UI/DeleteUI/@item.ContactID" class="btn btn-warning btn-rounded" style="width:70px;">Sil</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <!-- timeline time label -->
+
+                </div>
+
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+    <!-- /.content -->
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="/AdminLTE-3.0.4/dist/js/demo.js"></script>
+</body>
+</html>

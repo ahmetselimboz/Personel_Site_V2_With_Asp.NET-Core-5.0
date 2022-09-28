@@ -1,0 +1,48 @@
+﻿@model EntityLayer.Concrete.Project
+
+@{
+    ViewData["Title"] = "AddProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Proje Ekleme Sayfasi</h4>
+
+                <form class="forms-sample" method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Index">
+
+
+                    <div class="form-group row">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">İsim</label>
+                        <div class="col-sm-9">
+                            <input type="text" asp-for="ProjectName" class="form-control" id="exampleInputUsername2" placeholder="İsim">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Açıklama</label>
+                        <div class="col-sm-9">
+                            <input type="text" asp-for="Description" class="form-control" id="exampleInputUsername2" placeholder="Açıklama">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Tarih</label>
+                        <div class="col-sm-9">
+                            <input type="text" asp-for="Date" class="form-control" id="exampleInputUsername2" placeholder="Tarih">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Resim</label>
+                        <div class="col-sm-9">
+                            <input type="file" asp-for="Image" class="form-control" placeholder="Resim">
+                        </div>
+                    </div>
+
+
+
+                    <button class="btn btn-primary btn-rounded">Yeni Proje Ekle</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+

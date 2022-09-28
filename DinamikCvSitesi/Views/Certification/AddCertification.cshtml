@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Certification
+
+@{
+    ViewData["Title"] = "AddCertification";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Sertifika Ekleme Sayfasi</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group row">
+                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Sertifika</label>
+                    <div class="col-sm-9">
+                        <input type="text" asp-for="Award" class="form-control" id="exampleInputUsername2" placeholder="Sertifika">
+                    </div>
+
+                </div>
+                <button class="btn btn-primary btn-rounded">Yeni Sertifika Ekle</button>
+            </form>
+        </div>
+    </div>
+</div>
+

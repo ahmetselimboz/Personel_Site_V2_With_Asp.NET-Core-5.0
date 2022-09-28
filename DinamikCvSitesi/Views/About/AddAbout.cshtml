@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.About
+
+@{
+    ViewData["Title"] = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class=" form-group" method="post" enctype="multipart/form-data">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Proje Ekleme Sayfasi</h4>
+
+                <div class="forms-sample">
+
+                    @*<div class="form-group">
+                        <label for="exampleInputName1">Resim Adı</label>
+                        <input type="text" class="form-control" asp-for="Image" id="exampleInputName1" placeholder="Resim Adı">
+                    </div>*@
+
+                    <div class="form-group row">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Resim</label>
+                        <div class="col-sm-9">
+                            <input type="file" asp-for="Image" class="form-control" placeholder="Resim" />
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary btn-rounded">Yeni Resim Ekle</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

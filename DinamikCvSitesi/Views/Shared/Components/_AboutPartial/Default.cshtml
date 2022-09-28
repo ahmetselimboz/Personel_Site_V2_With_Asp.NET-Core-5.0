@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model  List<About>
+
+<section class="resume-section" id="about">
+    <div class="resume-section-content">
+        @foreach (var item in Model)
+        {
+            <h1 class="mb-0">
+                @item.Name
+                <span style="color: #5f00ab">@item.Surname</span>
+            </h1>
+            <div class="subheading mb-5">
+                @item.Title
+            </div>
+            <p class="lead mb-5"> @item.Description</p>
+        }
+
+        <div class="social-icons">
+            <a class="social-icon" target="_blank" href="@ViewBag.Linked"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" target="_blank" href="@ViewBag.Insta"><i class="fab fa-instagram"></i></a>
+            <a class="social-icon" target="_blank" href="@ViewBag.twit"><i class="fab fa-twitter"></i></a>
+            <a class="social-icon" target="_blank" href="@ViewBag.Git"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+<hr class="m-0" />
